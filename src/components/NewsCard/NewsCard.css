@@ -1,0 +1,12 @@
+.news-card {
+  display: flex;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 2px;
+}
+
+.news-card img {
+  height: 200px;
+  width: 200px;
+  margin-right: 25px;
+}

@@ -15,7 +15,7 @@ function App() {
       );
       setnewsArray(news.data.articles);
       setnewsResult(news.data.totalResults);
-      console.log(news);
+      // console.log(news);
     } catch (error) {
       console.log(error);
     }
@@ -23,10 +23,15 @@ function App() {
   useEffect(() => {
     newsApi();
   }, [Category, newsResult]);
+  // console.log(newsArray);
   return (
     <div className="App">
       <NavNews setCategory={setCategory} />
-      <NewsContent />
+      <NewsContent
+        newsArray={newsArray}
+        newsResult={newsResult}
+        Category={Category}
+      />
     </div>
   );
 }

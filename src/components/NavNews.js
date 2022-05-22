@@ -10,7 +10,7 @@ const NavNews = ({ setCategory }) => {
         {" "}
         <HamburgerDrawer setCategory={setCategory} />
       </div>
-      <h3>SydneyNews</h3>
+      <h3>Australia News ✌🏼</h3>
     </div>
   );
 };

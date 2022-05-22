@@ -1,3 +1,10 @@
+# in this web app I have used news API, we can render news from different category 
+
+
+
+https://user-images.githubusercontent.com/85336277/169688725-1b40c7b8-2ccd-4b31-a34b-69bed3ba39e3.mp4
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

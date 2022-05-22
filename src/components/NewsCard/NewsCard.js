@@ -1,9 +1,6 @@
 import React from "react";
 import "./NewsCard.css";
 const NewsCard = ({ newsItem }) => {
-  {
-    console.log(newsItem);
-  }
   return (
     <div className="news-card">
       <img alt="img not found" src={newsItem.urlToImage} />

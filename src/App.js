@@ -6,11 +6,15 @@ import NewsContent from "./components/NewsContent/NewsContent";
 import apikey from "./category/config";
 function App() {
   const [Category, setCategory] = useState("general");
+  const [newsArray, setnewsArray] = useState([]);
+  const [newsResult, setnewsResult] = useState();
   const newsApi = async () => {
     try {
       const news = await axios.get(
         `https://newsapi.org/v2/top-headlines?country=au&category=${Category}&apiKey=${apikey}`
       );
+      setnewsArray(news.data.articles);
+      setnewsResult(news.data.totalResults);
       console.log(news);
     } catch (error) {
       console.log(error);
@@ -18,10 +22,10 @@ function App() {
   };
   useEffect(() => {
     newsApi();
-  }, []);
+  }, [Category, newsResult]);
   return (
     <div className="App">
-      <NavNews />
+      <NavNews setCategory={setCategory} />
       <NewsContent />
     </div>
   );

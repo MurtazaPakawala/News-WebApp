@@ -3,12 +3,12 @@ import HamburgerDrawer from "./HamburgerDrawer";
 
 import "./NavNews.css";
 
-const NavNews = () => {
+const NavNews = ({ setCategory }) => {
   return (
     <div className="nav">
       <div className="icon">
         {" "}
-        <HamburgerDrawer />
+        <HamburgerDrawer setCategory={setCategory} />
       </div>
       <h3>SydneyNews</h3>
     </div>

@@ -12,7 +12,7 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 // import categories
 import categories from "../category/Category";
-export default function SwipeableTemporaryDrawer() {
+export default function SwipeableTemporaryDrawer({ setCategory }) {
   const [state, setState] = React.useState({
     left: false,
   });
@@ -41,7 +41,11 @@ export default function SwipeableTemporaryDrawer() {
       <List>
         {categories.map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton
+              onClick={() => {
+                setCategory(text);
+              }}
+            >
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
